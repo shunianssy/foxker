@@ -1,0 +1,15 @@
+pyproject.toml
+foxker/__init__.py
+foxker/__main__.py
+foxker/cli.py
+foxker/config.py
+foxker/gui.py
+foxker/path_converter.py
+foxker/proxy.py
+foxker/py.typed
+foxker.egg-info/PKG-INFO
+foxker.egg-info/SOURCES.txt
+foxker.egg-info/dependency_links.txt
+foxker.egg-info/entry_points.txt
+foxker.egg-info/requires.txt
+foxker.egg-info/top_level.txt

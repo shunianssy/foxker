@@ -1,0 +1,4 @@
+[console_scripts]
+docker = foxker.cli:docker_main
+foxker = foxker.cli:main
+foxker-gui = foxker.gui:launch_gui

@@ -1,0 +1,10 @@
+{
+    "wsl_distro": "debian",
+    "podman_path": "podman",
+    "windows_drives_prefix": "/mnt",
+    "mount_point": "/tmp/foxker-mounts",
+    "command_timeout": 300,
+    "stream_buffer_size": 8192,
+    "log_level": "INFO",
+    "log_file": null
+}
