@@ -1,6 +1,7 @@
 {
     "wsl_distro": "debian",
     "podman_path": "podman",
+    "use_sudo": false,
     "windows_drives_prefix": "/mnt",
     "mount_point": "/tmp/foxker-mounts",
     "command_timeout": 300,

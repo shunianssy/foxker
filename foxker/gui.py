@@ -143,6 +143,15 @@ class FoxkerGUI:
         podman_entry = ttk.Entry(podman_frame, textvariable=self.podman_path_var, width=35)
         podman_entry.grid(row=0, column=1, sticky=tk.EW, pady=5, padx=5)
         
+        # sudo 模式选项
+        self.use_sudo_var = tk.BooleanVar(value=self.config.use_sudo)
+        sudo_check = ttk.Checkbutton(
+            podman_frame,
+            text="使用 sudo 运行 Podman (rootful 模式，解决 systemd 问题)",
+            variable=self.use_sudo_var
+        )
+        sudo_check.grid(row=1, column=0, columnspan=2, sticky=tk.W, pady=5)
+        
         podman_frame.columnconfigure(1, weight=1)
         
         # 性能设置
@@ -360,6 +369,7 @@ class FoxkerGUI:
             # 更新配置值
             self.config.wsl_distro = self.wsl_distro_var.get()
             self.config.podman_path = self.podman_path_var.get()
+            self.config.use_sudo = self.use_sudo_var.get()
             self.config.command_timeout = int(self.timeout_var.get())
             self.config.stream_buffer_size = int(self.buffer_var.get())
             self.config.windows_drives_prefix = self.drives_prefix_var.get()
@@ -386,6 +396,7 @@ class FoxkerGUI:
             # 更新界面
             self.wsl_distro_var.set(self.config.wsl_distro)
             self.podman_path_var.set(self.config.podman_path)
+            self.use_sudo_var.set(self.config.use_sudo)
             self.timeout_var.set(str(self.config.command_timeout))
             self.buffer_var.set(str(self.config.stream_buffer_size))
             self.drives_prefix_var.set(self.config.windows_drives_prefix)

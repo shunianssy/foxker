@@ -21,6 +21,9 @@ class Config:
     wsl_distro: str = "debian"  # WSL 发行版名称
     podman_path: str = "podman"  # podman 命令路径
     
+    # Podman 运行模式
+    use_sudo: bool = False  # 是否使用 sudo 运行 podman (rootful 模式)
+    
     # 路径映射配置
     windows_drives_prefix: str = "/mnt"  # Windows 驱动器挂载前缀
     mount_point: str = "/tmp/foxker-mounts"  # 临时挂载点

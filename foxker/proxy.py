@@ -247,6 +247,10 @@ class DockerProxy:
         # 构建 Podman 命令
         podman_cmd = [self.config.podman_path, command] + transformed_args
         
+        # 如果配置了 sudo，添加 sudo
+        if self.config.use_sudo:
+            podman_cmd = ["sudo"] + podman_cmd
+        
         # 构建 WSL 命令
         wsl_cmd = [
             "wsl",

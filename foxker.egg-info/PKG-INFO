@@ -31,3 +31,8 @@ Requires-Dist: black>=23.0; extra == "dev"
 Requires-Dist: isort>=5.0; extra == "dev"
 Requires-Dist: mypy>=1.0; extra == "dev"
 Requires-Dist: flake8>=6.0; extra == "dev"
+
+# Foxker
+
+一个适用于windows的Docker便携指令客户端
+

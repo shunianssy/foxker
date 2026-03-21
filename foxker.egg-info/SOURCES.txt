@@ -1,8 +1,10 @@
+README.md
 pyproject.toml
 foxker/__init__.py
 foxker/__main__.py
 foxker/cli.py
 foxker/config.py
+foxker/foxker.ico
 foxker/gui.py
 foxker/path_converter.py
 foxker/proxy.py
